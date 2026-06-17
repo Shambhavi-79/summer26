@@ -1,0 +1,15 @@
+div{
+    font-size: x-large;
+    border: 2px, solid, brown;
+    padding: 30px;
+    margin: 10px;
+    display: inline-block;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+span{
+    border: 2px, solid black;
+    font-size: 250%;
+}
