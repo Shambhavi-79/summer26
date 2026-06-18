@@ -1,0 +1,43 @@
+<!-- WAP in JS to accept a number and check whether it is an evil number 
+or angel number -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2</title>
+    <script>
+        function toBinary() {
+            let num = document.getElementById('v1').value
+            let binary = ""
+            let rem;
+            console.log(`Entered decimal number: ${num}`)
+            while (num > 0) {
+                let rem = num % 2
+                binary = rem + binary
+                num = parseInt(num / 2)
+            }
+            document.getElementById('res').value = binary
+
+            let x = binary.length
+            function checkNumber(){
+                if (x % 2 == 0){
+                    console.log("The number is evil")
+                }
+                else{
+                    console.log("The number is angel")
+                }
+            }
+            console.log(checkNumber(x))
+        }
+    </script>
+</head>
+<body>
+    <input id="v1" type="text" placeholder="Enter a number">
+    <br>
+    <input type="button" value="Binary" onclick="toBinary()">  
+    <br>  
+    <input type="text" placeholder="Result" id = 'res'>     
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 3</title>
+    <script>
+        function operations(op){
+            let x = document.getElementById('v1').value
+            let y = document.getElementById('v2').value
+            if (op == 'S')
+                document.getElementById('res').value = parseInt(x) + parseInt(y)
+            else if(op == 'P')
+                document.getElementById('res').value = parseInt(x) * parseInt(y)
+            else if(op == 'D')
+                document.getElementById('res').value = parseInt(x) - parseInt(y)
+            else if (op == 'Q')
+                document.getElementById('res').value = parseInt(x) / parseInt(y)
+        }
+    </script>
+</head>
+<body>
+    <input id = 'v1' type = "text" placeholder="Enter a number"><br>
+    <input id = 'v2' type = "text" placeholder="Enter a number"><br>
+    <input type = "text" placeholder="Result" id = 'res'><br>
+    <input type="button" value="Sum" onclick="operations('S')">  
+    <input type="button" value="Product" onclick="operations('P')">  
+    <input type="button" value="Difference" onclick="operations('D')">  
+    <input type="button" value="Quotient" onclick="operations('Q')"> 
+</body>
+</html>

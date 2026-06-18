@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 1</title>
+    <script>
+        // console.log("Hello MERN Learners!")
+        // let a = 3
+        // let b = 4
+        // console.log(a)
+        // console.log(b)
+        // console.log(a + b)
+
+        // soln 1
+
+        function toBinary() {
+            let num = document.getElementById('v1').value
+            let binary = ""
+            let rem;
+            console.log(`Entered decimal number: ${num}`)
+            while (num > 0) {
+                let rem = num % 2
+                binary = rem + binary
+                num = parseInt(num / 2)
+            }
+            console.log(`Binary number: ${binary}`)
+        }
+    </script>
+</head>
+
+<body>
+    <!-- WAP in JS to print binary value of a decimal value -->
+    <input id="v1" type="text" placeholder="Enter a number">
+    <br>
+    <input type="button" value="Binary" onclick="toBinary()">
+</body>
+
+</html>
